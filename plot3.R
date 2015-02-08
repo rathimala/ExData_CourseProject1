@@ -54,16 +54,14 @@ Data_2days$Sub_metering_3 <- as.numeric(as.character(Data_2days$Sub_metering_3))
 # Plot3: Energy submetering Plot as a png file
 
 png(file="plot3.png", width=480, height=480, units="px")
+
 with(Data_2days, {
   plot(datetime2, Sub_metering_1, type="l", col="black", ylab="Energy Sub Metering", xlab="")
   lines(datetime2, Sub_metering_2, type="l", col="red")
   lines(datetime2, Sub_metering_3, type="l", col="blue")
   legend("topright", pch = "---", col=c("black", "red", "blue"), legend=c("Sub_Metering_1", "Sub_Metering_2", "Sub_Metering_3"))
 })
-plot(Data_2days$datetime2, Data_2days$Sub_metering_1, type="l", col="black", ylab="Energy Sub Metering", xlab="")
-lines(Data_2days$datetime2, Data_2days$Sub_metering_2, type="l", col="red")
-lines(Data_2days$datetime2, Data_2days$Sub_metering_3, type="l", col="blue")
-legend("topright", pch = "---", col=c("black", "red", "blue"), legend=c("Sub_Metering_1", "Sub_Metering_2", "Sub_Metering_3"))
+
 dev.off()
 # RStudioGD 
 #         2 
